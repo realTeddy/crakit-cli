@@ -1,0 +1,10 @@
+{
+  "id": "GHSA-lodash-2",
+  "summary": "Prototype Pollution in lodash",
+  "aliases": ["CVE-2020-8203"],
+  "database_specific": {"severity": "MODERATE"},
+  "affected": [
+    {"package": {"name": "lodash", "ecosystem": "npm", "purl": "pkg:npm/lodash"},
+     "ranges": [{"type": "SEMVER", "events": [{"introduced": "0"}, {"fixed": "4.17.19"}]}]}
+  ]
+}

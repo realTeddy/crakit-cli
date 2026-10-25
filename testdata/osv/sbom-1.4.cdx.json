@@ -1,0 +1,11 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "version": 1,
+  "metadata": {"tools": [{"vendor": "x", "name": "y", "version": "1"}], "component": {"type": "application", "name": "demo"}},
+  "components": [
+    {"type": "library", "name": "lodash", "version": "4.17.20", "purl": "pkg:npm/lodash@4.17.20"},
+    {"type": "library", "name": "minimist", "version": "1.2.5", "purl": "pkg:npm/minimist@1.2.5"},
+    {"type": "library", "group": "@scope", "name": "pkg", "version": "2.1.0", "purl": "pkg:npm/%40scope/pkg@2.1.0"}
+  ]
+}
