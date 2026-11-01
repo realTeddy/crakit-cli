@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/realTeddy/crakit/cli/internal/policy"
+	"github.com/realTeddy/crakit-cli/internal/policy"
 )
 
 func runPolicy(e Env, args []string) int {

@@ -116,7 +116,7 @@ func archiveTime() time.Time {
 
 func build(version string, t Target, dst string) error {
 	cmd := exec.Command("go", "build", "-trimpath", "-buildvcs=false",
-		"-ldflags", "-s -w -X github.com/realTeddy/crakit/cli/internal/cmd.Version="+version,
+		"-ldflags", "-s -w -X github.com/realTeddy/crakit-cli/internal/cmd.Version="+version,
 		"-o", dst, ".")
 	cmd.Env = append(os.Environ(), "CGO_ENABLED=0", "GOOS="+t.OS, "GOARCH="+t.Arch)
 	cmd.Stdout, cmd.Stderr = os.Stdout, os.Stderr

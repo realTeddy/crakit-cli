@@ -11,7 +11,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/realTeddy/crakit/cli/internal/cra"
+	"github.com/realTeddy/crakit-cli/internal/cra"
 )
 
 func run(t *testing.T, env map[string]string, stdin string, args ...string) (code int, stdout, stderr string) {

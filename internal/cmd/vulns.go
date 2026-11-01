@@ -8,8 +8,8 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/realTeddy/crakit/cli/internal/cra"
-	"github.com/realTeddy/crakit/cli/internal/osv"
+	"github.com/realTeddy/crakit-cli/internal/cra"
+	"github.com/realTeddy/crakit-cli/internal/osv"
 )
 
 const vulnsNote = "Findings are from OSV.dev and are not a determination that a vulnerability is 'actively exploited' under Art. 14(1); that judgement is yours."

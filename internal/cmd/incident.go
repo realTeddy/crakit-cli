@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/realTeddy/crakit/cli/internal/incident"
+	"github.com/realTeddy/crakit-cli/internal/incident"
 )
 
 func runIncident(e Env, args []string) int {

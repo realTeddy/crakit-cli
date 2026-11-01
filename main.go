@@ -8,7 +8,7 @@ package main
 import (
 	"os"
 
-	"github.com/realTeddy/crakit/cli/internal/cmd"
+	"github.com/realTeddy/crakit-cli/internal/cmd"
 )
 
 func main() {

@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/realTeddy/crakit/cli/internal/cra"
+	"github.com/realTeddy/crakit-cli/internal/cra"
 )
 
 // Interactive fills the missing fields of in by asking numbered questions on

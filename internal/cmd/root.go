@@ -9,8 +9,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/realTeddy/crakit/cli/internal/cra"
-	"github.com/realTeddy/crakit/cli/internal/sbom"
+	"github.com/realTeddy/crakit-cli/internal/cra"
+	"github.com/realTeddy/crakit-cli/internal/sbom"
 )
 
 // Version is set at build time with -ldflags "-X .../internal/cmd.Version=x".

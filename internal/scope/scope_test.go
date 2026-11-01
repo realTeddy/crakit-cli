@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/realTeddy/crakit/cli/internal/cra"
+	"github.com/realTeddy/crakit-cli/internal/cra"
 )
 
 func base() Input {

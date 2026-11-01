@@ -10,18 +10,26 @@ Self-serve EU Cyber Resilience Act (Regulation (EU) 2024/2847) kit for small mak
 curl -fsSL https://crakit.tewodros.me/install.sh | sh     # Linux and macOS; verifies the SHA-256 before installing
 ```
 
-Windows and manual downloads, with checksums and the CLI's own SBOM: https://crakit.tewodros.me/cli
+Windows and manual downloads, with checksums and the CLI's own SBOM: https://crakit.tewodros.me/cli or the [GitHub releases](https://github.com/realTeddy/crakit-cli/releases).
+
+With Go 1.27 or later:
+
+```sh
+go install github.com/realTeddy/crakit-cli@latest    # the binary is named crakit-cli; rename it to crakit if you like
+```
 
 ## Build
 
 ```sh
-cd cli && go build -o crakit .
+go build -o crakit .
 go run ./scripts/release -version 0.1.0 -out dist   # all six platform archives plus SHA256SUMS, reproducible
 ```
 
-## Licence
+## Licence and security
 
-Apache-2.0 (`LICENSE`, `NOTICE`).
+Apache-2.0 (`LICENSE`, `NOTICE`). Report vulnerabilities as described in `SECURITY.md`, which this CLI generated with `crakit policy`.
+
+The free web scope checker and the planned hosted app live at https://crakit.tewodros.me.
 
 ## Commands
 

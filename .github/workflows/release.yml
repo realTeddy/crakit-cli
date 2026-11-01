@@ -1,0 +1,41 @@
+# For a tag such as v0.1.0: archives for six platforms, SHA256SUMS and the CLI's own SBOM.
+name: release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: false
+      - run: go test ./...
+      - name: Build archives
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          SOURCE_DATE_EPOCH="$(git log -1 --format=%ct)"
+          export SOURCE_DATE_EPOCH
+          go run ./scripts/release -version "$version" -out dist
+          go build -o "$RUNNER_TEMP/crakit" .
+          "$RUNNER_TEMP/crakit" sbom . --name crakit --version "$version" --tool builtin -o "dist/crakit_${version}_sbom.cdx.json"
+          echo "VERSION=$version" >> "$GITHUB_ENV"
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" dist/* \
+            --title "crakit ${VERSION}" \
+            --notes "Verify downloads against SHA256SUMS. The CLI's own SBOM is attached. Install on Linux or macOS with: curl -fsSL https://crakit.tewodros.me/install.sh | sh
+
+          This is a checklist and drafting aid, not legal advice and not a guarantee of compliance with Regulation (EU) 2024/2847."

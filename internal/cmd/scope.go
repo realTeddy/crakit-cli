@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/realTeddy/crakit/cli/internal/cra"
-	"github.com/realTeddy/crakit/cli/internal/scope"
+	"github.com/realTeddy/crakit-cli/internal/cra"
+	"github.com/realTeddy/crakit-cli/internal/scope"
 )
 
 func runScope(e Env, args []string) int {

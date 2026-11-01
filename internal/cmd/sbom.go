@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/realTeddy/crakit/cli/internal/sbom"
+	"github.com/realTeddy/crakit-cli/internal/sbom"
 )
 
 func runSBOM(e Env, args []string) int {

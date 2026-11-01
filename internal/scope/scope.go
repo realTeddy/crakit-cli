@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/realTeddy/crakit/cli/internal/cra"
+	"github.com/realTeddy/crakit-cli/internal/cra"
 )
 
 // Answer values.

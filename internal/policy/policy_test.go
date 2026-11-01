@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/realTeddy/crakit/cli/internal/cra"
+	"github.com/realTeddy/crakit-cli/internal/cra"
 )
 
 func opts() Options {

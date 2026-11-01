@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/realTeddy/crakit/cli/internal/cra"
+	"github.com/realTeddy/crakit-cli/internal/cra"
 )
 
 var aware = time.Date(2026, 10, 1, 10, 0, 0, 0, time.UTC)
