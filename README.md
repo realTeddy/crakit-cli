@@ -4,11 +4,24 @@ Self-serve EU Cyber Resilience Act (Regulation (EU) 2024/2847) kit for small mak
 
 **This is a checklist and drafting aid, not legal advice and not a guarantee of compliance with Regulation (EU) 2024/2847.**
 
+## Install
+
+```sh
+curl -fsSL https://crakit.tewodros.me/install.sh | sh     # Linux and macOS; verifies the SHA-256 before installing
+```
+
+Windows and manual downloads, with checksums and the CLI's own SBOM: https://crakit.tewodros.me/cli
+
 ## Build
 
 ```sh
 cd cli && go build -o crakit .
+go run ./scripts/release -version 0.1.0 -out dist   # all six platform archives plus SHA256SUMS, reproducible
 ```
+
+## Licence
+
+Apache-2.0 (`LICENSE`, `NOTICE`).
 
 ## Commands
 
